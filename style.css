@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(215, 238, 225);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main-container {
+  width: 500px;
+  height: 540px;
+  background-color: rgb(231, 250, 237);
+  border-radius: 20px;
+  box-shadow: 3px 3px 2px 2px rgb(133, 201, 161);
+  padding: 30px 50px;
+  line-height: 60px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#firstName,
+#lastName,
+#email,
+#password,
+#btn {
+  width: 100%;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 5px;
+}
+
+#firstName,
+#lastName,
+#email {
+  margin-bottom: 25px;
+}
+
+#firstName,
+#lastName,
+#email,
+#password {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid lightgray;
+}
+
+#firstName:focus-visible,
+#lastName:focus-visible,
+#email:focus-visible,
+#password:focus-visible {
+  outline: none;
+  box-shadow: 0 0 1px 1px rgb(133, 201, 161);
+}
+
+#btn {
+  background-color: rgb(119, 219, 161);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border: 1px solid rgb(116, 175, 141);
+}
+
+#btn:active {
+  outline: none;
+  box-shadow: 0 0 2px 1px rgb(133, 201, 161);
+}
+
+#btn:disabled {
+  background-color: rgb(137, 235, 178);
+  border: none;
+}
+
+.modal {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  top: -1000px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 15px;
+}
+
+.modal-active {
+  position: fixed;
+  top: 0;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.modal__content {
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 5px 15px black;
+}
+
+.modal__top {
+  height: 150px;
+  background-color: rgb(119, 219, 161);
+  color: white;
+  font-size: 120px;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+}
+
+.modal__bottom {
+  padding-top: 20px;
+  line-height: 50px;
+  text-align: center;
+  background-color: rgb(231, 250, 237);
+}
+
+.modal__close-button {
+  height: 35px;
+  width: 160px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(255, 196, 0);
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.modal__close-button:hover {
+  background-color: rgb(241, 185, 0);
+}
+
+.modal__close-button:active {
+  outline: none;
+  box-shadow: 0 0 2px 1px rgb(212, 163, 0);
+}

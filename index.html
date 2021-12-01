@@ -5,8 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSCoreHome13</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
+    <div class="main-container">
+        <h1>Please, sign up</h1>
+        <form id="myForm">
+            <input type="text" oninput="validNames()" id="firstName" placeholder="First Name">
+            <br>
+            <input type="text" oninput="validSurname()" id="lastName" placeholder="Last Name">
+            <br>
+            <input type="text" oninput="validEmail()" id="email" placeholder="Email address">
+            <br>
+            <input type="text" oninput="validPass()" id="password" placeholder="Password">
+            <br>
+            <input type="checkbox" onchange="agreeBtn()" id="checkbox" name="agree">
+            <span>I agree with Privacy Policy.</span>
+            <br>
+            <input type="button" onclick="submitBtn()" id="btn" name="sign" value="Sign Up" disabled>
+        </form>
+    </div>
+    <div class="modal">
+        <div class="modal__content">
+            <div class="modal__top">
+                <i class="uil uil-check-circle"></i>
+            </div>
+            <div class="modal__bottom">
+                <h1>Great!</h1>
+                <p>Your account has been created successfully.</p>
+                <button class="modal__close-button" onclick="closeBtn()">Start Exploring</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
